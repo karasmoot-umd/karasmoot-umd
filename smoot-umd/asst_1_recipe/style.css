@@ -1,0 +1,229 @@
+/* INTENTIONALLY UGLY STARTER STYLES */
+/* These styles are very, very ugly. */
+/* Time to make them attractive, legible, and usable */
+:root {
+    --color-primary: #321A13;
+    --color-background: #fbf6ed;
+    --color-button: #9A4F4A;
+    --color-green: #5A674B;
+    --color-secondary: #C3773B;
+
+    --font-display: "Karla", sans-serif;
+    --font-body: "Lato", sans-serif;
+
+    --space-1: 0.5rem;
+    --space-2: 0.75rem;
+    --space-3: 1rem;
+    --space-4: 1.5rem;
+    --space-5: 2rem;
+    --space-6: 3rem;
+
+    --radius: 1rem;
+    --shadow: 0 1rem 2.5rem rgba(63, 40, 28, 0.14);
+
+    --border-style: solid;
+    --border-color: #B3B3B3;
+    --border-width: 1.5px;
+    --border-radius: 0.625rem;
+
+    --chip-radius: 2.5rem;
+}
+
+body {
+background-color: var(--color-background);
+font-family: var(--font-body);
+color: var(--color-primary);
+}
+
+h1, h2 {
+    font-family: var(--font-display);
+}
+
+.recipe-container {
+    display:grid;
+    grid-template-columns: minmax(1,1fr);
+    grid-template-rows: minmax(1,1fr);
+    grid-template-areas:
+    "recipe-header recipe-header"
+    "ingredients-section recipe-meta" 
+    "ingredients-section instructions-section";
+    gap: var(--space-3);
+    min-height:100vh;
+    
+}
+
+.recipe-header {
+    grid-area: recipe-header;
+    display:flex;
+    border-radius: var(--border-radius);
+    border-style: var(--border-style);
+    border-color: var(--color-primary);
+    padding: var(--space-3);
+    gap: var(--space-3);
+    justify-content: center;
+
+   
+}
+
+.recipe-meta {
+    grid-area: recipe-meta;
+    padding: var(--space-5);
+
+    /* Border radius */
+   border-radius: var(--border-radius);
+   border-style: var(--border-style);
+   border-width: var(--border-width);
+   border-color: var(--color-primary);
+   
+}
+
+.chip-recipeinfo {
+display: inline-flex;
+gap: var(--space-1);
+}
+
+#difficulty {
+background-color: var(--color-green);
+}
+
+.maincard{
+display: flex;
+align-items: flex-start;
+gap: var(--space-3);
+}
+.maincard-content{
+    flex: 1 1 auto;
+    min-width:0;
+}
+.meta-item{
+display: inline-flex;
+flex: 0 0 auto;
+padding:  var(--space-1) var(--space-3);
+background-color: var(--color-button);
+border-radius: var(--chip-radius);
+color: var(--color-background);
+}
+.recipe-bodydescription {
+display: flex;
+gap: var(--space-1);
+margin-top: var(--space-5);
+align-content: center;
+}
+.ingredients-section {
+   grid-area: ingredients-section;
+   padding: var(--space-5);
+
+   /* Border radius */
+   border-radius: var(--border-radius);
+   border-style: var(--border-style);
+   border-width: var(--border-width);
+   border-color: var(--color-primary);
+
+}
+
+.ingredients-list li {
+    margin-bottom: var(--space-5);
+}
+
+.ingredient-size {
+font-size: var(--space-3);
+font-weight: bold;
+}
+
+.instructions-section {
+    grid-area: instructions-section;
+    padding: var(--space-5);
+    /* Border radius */
+   border-radius: var(--border-radius);
+   border-style: var(--border-style);
+   border-width: var(--border-width);
+   border-color: var(--color-primary);
+}
+
+.instruction-step {
+    margin-bottom: var(--space-3);
+    
+}
+
+.recipe-footer {
+    display:block;
+    border-radius: var(--border-radius);
+    border-style: var(--border-style);
+    border-color: var(--color-primary);
+    padding: var(--space-3);
+    gap: var(--space-3);
+    justify-content: center;
+    margin-top: var(--space-3);
+    
+}
+
+.recipe-image {
+    flex: 0 0 300px;
+}
+
+.recipe-image img {
+display:block;
+width: 100%;
+height:auto;
+}
+
+.verticalspacer {
+    border-left: 2px solid var(--color-primary);
+}
+
+.fa-mortar-pestle, .fa-alarm-clock {
+    color: var(--color-secondary);
+    padding-right: var(--space-1);
+}
+
+@media (max-width: 48rem) {
+    .recipe-container {
+    display:block;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "recipe-header"
+    "recipe-meta"
+    "ingredients-section"
+    "instructions-section";
+    }
+
+    .recipe-header {
+        margin-bottom: var(--space-3);
+    }
+
+    .recipe-meta {
+        margin-bottom: var(--space-3);
+    }
+
+    .ingredients-section {
+        margin-bottom: var(--space-3);
+    }
+    .instructions-section {
+        margin-bottom: var(--space-3);
+    }
+
+    .chip-recipeinfo {
+    display:block;
+    max-width: fit-content;
+    }
+
+    .meta-item {
+        margin-bottom: var(--space-1);
+    }
+    .maincard {
+    display:block;
+    flex-direction: row;
+    justify-content: center;
+    }
+    .recipe-image {
+        display:block;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+
+    }
+    .maincard-content {
+        flex: 1;
+        display:block;
+    }
+}
