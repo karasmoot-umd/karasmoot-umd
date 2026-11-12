@@ -1,0 +1,140 @@
+
+body {
+  margin: 0;
+  background: #10101c;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+#app {
+  display: flex;
+  margin: auto;
+  padding: 35px;
+}
+
+h1 {
+  font-size: 42px;
+  margin: 10px 0;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+p {
+  color: #c8c8d5;
+  line-height: 1.5;
+}
+
+button {
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* HEADER */
+
+.logo {
+  display: inline-block;
+  background: #352052;
+  color: #d6b6ff;
+  padding: 12px 18px;
+  border-radius: 12px;
+}
+
+.progress {
+  color: #c59cff;
+  margin-top: 20px;
+}
+
+/* GENRE FILTERS */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 40px 0 30px;
+}
+
+.filter-btn {
+  background: #1c1b2b;
+  color: white;
+  border: 1px solid #444052;
+  border-radius: 25px;
+  padding: 12px 22px;
+}
+
+.filter-btn.active {
+  background: #b58aff;
+  color: #15101e;
+};
+
+/* GAME CARDS */
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.game-card {
+  position: relative;
+  height: 200px;
+  border: 2px solid #383449;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.game-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.game-card h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 35px 15px 15px;
+  font-size: 20px;
+  background: linear-gradient(transparent, #000000e6);
+}
+
+.game-card.selected {
+  border: 3px solid #a45cff;
+  box-shadow: 0 0 12px #a45cff66;
+}
+
+.checkbox {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 27px;
+  height: 27px;
+  border: 2px solid white;
+  border-radius: 6px;
+  z-index: 2;
+}
+
+.game-card.selected .checkbox {
+  background: #9559ec;
+  border-color: #9559ec;
+}
+
+.game-card.selected .checkbox::after {
+  content: "✔";
+  display: block;
+  text-align: center;
+  color: white;
+}
+
+/* BUTTONS */
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 30px;
+}
