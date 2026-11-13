@@ -1,0 +1,307 @@
+*
+{
+    box-sizing:border-box
+}
+body
+{
+    margin:0;
+    background:#0e1020;
+    color:#f5f4ff;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:16px
+}
+.container
+{
+    max-width:1154px;
+    margin:0 auto;
+    padding:52px 0 32px
+}
+.brand
+{
+    font-size:28px;
+    font-weight:750;
+    padding-bottom:18px;
+    border-bottom:1px solid #24223e;
+    margin-bottom:19px
+}
+.brand span
+{
+    color:#8c54f5
+}
+.intro
+{
+    display:grid;
+    grid-template-columns:1.35fr 1fr;
+    gap:18px
+}
+.hero,.how,.detail-head{
+    background:#191c31;
+    border-radius:8px}
+    .hero
+    {
+        padding:27px 32px
+    }
+    .hero h1
+    {
+        font-size:28px;
+        margin:0 0 17px
+    }
+    .hero p
+    {
+        margin:0
+    }
+    .hero em
+    {
+        color:#17d4f7;
+        font-style:normal
+    }
+    .how
+    {
+        background:#101d2d;
+        border:1px solid #13d1f1;
+        padding:29px 32px;
+        line-height:1.2
+    }
+    .filters
+    {
+        display:flex;
+        gap:8px;
+        flex-wrap:wrap;
+        margin:28px 0 24px
+    }
+    button
+    {
+        font:inherit;
+        cursor:pointer
+    }
+    .filter
+    {
+        color:#f5f4ff;
+        background:transparent;
+        border:1px solid #8c54f5;
+        border-radius:22px;
+        padding:8px 24px;
+        min-width:68px
+    }
+    .filter.active
+    {
+        background:#8951f4
+    }
+    .games
+    {
+        display:grid;
+        grid-template-columns:repeat(5,minmax(0,1fr));
+        gap:23px 16px
+    }
+    .game
+    {
+        position:relative;
+        display:block;
+        padding:0;
+        border:0;
+        border-radius:4px;
+        background:#191c31;
+        overflow:hidden;
+        aspect-ratio:218/180
+    }
+    .game img{width:100%;
+        height:100%;
+        object-fit:cover;
+        display:block
+    }
+    .check
+    {
+        position:absolute;
+        right:12px;
+        top:9px;
+        width:32px;
+        height:32px;
+        border:2px solid #8951f4;
+        border-radius:4px;
+        color:white;
+        font-size:23px;
+        display:grid;
+        place-items:center
+    }
+    .check.checked{background:#8951f4
+    }
+    footer
+    {
+        display:flex;
+        justify-content:flex-end;
+        align-items:center;
+        gap:42px;
+        margin-top:18px
+    }
+    .text-button
+    {
+        background:none;
+        border:0;
+        color:#10d5f5;
+        padding:15px 0;
+        font-size:18px
+    }
+    .primary
+    {
+        background:#8951f4;
+        color:white;
+        border:0;
+        border-radius:7px;
+        padding:19px 32px;
+        font-size:18px;
+        min-width:210px
+    }
+    .primary:disabled
+    {
+        background:#aaa;
+        color:#121321;
+        cursor:not-allowed
+    }
+    .movies
+    {
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:14px;
+        margin-top:26px
+    }
+    .movie
+    {
+        display:flex;
+        text-align:left;
+        gap:16px;
+        min-height:190px;
+        background:#191c31;
+        color:inherit;
+        border:1px solid #4b4b60;
+        border-radius:9px;
+        padding:24px
+    }
+    .movie:hover
+    {
+        border-color:#8951f4
+    }
+    .poster img
+    {
+        flex:0 0 120px;
+        max-width: auto;
+        height:140px;
+        border-radius:4px;
+        background:repeating-conic-gradient(#eee 0% 25%,#fff 0% 50%) 50%/20px 20px;
+        display:grid;
+        place-items:center;
+        object-fit:cover;
+        font-size:30px
+    }
+    .movie h2
+    {
+        font-size:23px;
+        margin:9px 0 12px
+    }
+    .rating
+    {
+        color:#0cd8f5;
+        text-decoration:underline;
+        font-weight:bold;
+        font-size:14px
+    }
+    .movie p
+    {
+        margin:10px 0 0;
+        line-height:1.25
+    }
+    .list-footer
+    {
+        justify-content:space-between;
+        margin-top:64px
+    }
+    .detail-head
+    {
+        display:flex;
+        align-items:center;
+        gap:22px;
+        padding:23px 32px;
+        margin-top:-4px
+    }
+    .detail-head h1
+    {
+        font-size:28px;
+        margin:0
+    }
+    .detail-head span
+    {
+        margin-left:auto
+    }
+    .back-arrow
+    {
+        border:0;
+        background:none;
+        color:#8951f4;
+        font-size:34px;
+        line-height:1
+    }
+    .detail-body
+    {
+        display:flex;
+        gap:32px;
+        margin:24px 74px
+    }
+    .detail-poster img
+    {
+        max-width: 230px;
+        height:330px;
+        flex:none;
+        background:repeating-conic-gradient(#eee 0% 25%,#fff 0% 50%) 50%/20px 20px;
+        border-radius:5px;
+        display:grid;
+        place-items:center;
+        object-fit:cover;
+        font-size:50px
+    }
+    .detail-body article
+    {
+        font-size:18px;
+        line-height:1.3
+    }
+    .detail-body h3
+    {
+        font-size:19px;
+        margin:0 0 0
+    }
+    .detail-body h3:not(:first-child)
+    {
+        margin-top:32px
+    }
+    .detail-body p
+    {
+        margin:0
+    }
+    .detail-body .description
+    {
+        margin-top:24px
+    }
+    .detail-actions footer
+    {
+        justify-content:space-between;
+        margin-top:170px
+    }
+    @media(max-width:1200px)
+    {
+        .container{margin:0 5%}
+    }
+        @media(max-width:750px)
+        {
+            .container{padding-top:24px}
+            .intro{grid-template-columns:1fr}
+            .games{grid-template-columns:repeat(2,minmax(0,1fr))}
+            .movies{grid-template-columns:1fr}
+            .detail-head{flex-wrap:wrap}
+            .detail-head span{margin-left:0;width:100%}
+            .detail-body{margin:24px 0;flex-direction:column}
+            .detail-actions footer{margin-top:40px}
+            footer{gap:16px;flex-wrap:wrap}
+            .primary{min-width:0}
+            .hero h1{font-size:24px}}
+            @media(min-width:751px) and (max-width:1000px)
+            {
+                .games{grid-template-columns:repeat(3,minmax(0,1fr))}
+            }
